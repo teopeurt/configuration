@@ -1,4 +1,5 @@
 {{ COMMON_LOG_DIR }}/tracking/tracking.log {
+  {{ COMMON_TRACKING_LOG_ROTATION_CONDITION | default('size 1M') }}
   compress
   create
   dateext
@@ -7,7 +8,6 @@
   nodelaycompress
   notifempty
   rotate 16000
-  size 1M
   postrotate
     /usr/bin/killall -HUP rsyslogd
   endscript
