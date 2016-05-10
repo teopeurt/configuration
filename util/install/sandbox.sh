@@ -59,7 +59,7 @@ fi
 ## Clone the configuration repository and run Ansible
 ##
 cd /var/tmp
-git clone https://github.com/edx/configuration
+git clone https://github.com/teopeurt/configuration
 cd configuration
 git checkout $CONFIG_VER
 
